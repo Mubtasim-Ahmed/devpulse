@@ -5,7 +5,7 @@
 ![Node.js](https://img.shields.io/badge/Node.js-18%2B-green)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)
 ![Express](https://img.shields.io/badge/Express-4.18-lightgrey)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Neon%20%7C%20Local-blue)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Neon%20-blue)
 
 ---
 
@@ -19,14 +19,12 @@ DevPulse is a backend API built with **TypeScript**, **Express.js**, and **Postg
 
 | Feature | Description |
 | --- | --- |
-| **JWT Authentication** | Secure signup/login with bcrypt-hashed passwords (10 salt rounds) and 7-day tokens |
+| **JWT Authentication** | Secure signup/login with bcrypt-hashed passwords |
 | **Role-Based Access** | Contributors and Maintainers with distinct permissions |
 | **Issue Tracking** | Create bugs and feature requests with validation (title, description, type, status) |
-| **Workflow** | Status flow: `open` → `in_progress` → `resolved` (Maintainers control status changes) |
-| **Filtering & Sorting** | Filter by `type` and `status`; sort by `newest` or `oldest` |
 | **RESTful API** | Consistent JSON responses with proper HTTP status codes |
-| **Raw SQL** | Native `pg` driver with parameterized queries (no ORM, no JOINs) |
-| **Cloud-Ready DB** | Works with Neon PostgreSQL (SSL) or any PostgreSQL instance |
+| **Raw SQL** | Native `pg` driver with parameterized queries|
+| **Cloud-Ready DB** | Works with Neon PostgreSQL |
 
 ---
 
@@ -35,9 +33,9 @@ DevPulse is a backend API built with **TypeScript**, **Express.js**, and **Postg
 - **Runtime:** Node.js 18+
 - **Language:** TypeScript (strict mode)
 - **Framework:** Express.js
-- **Database:** PostgreSQL ([Neon](https://neon.tech) recommended)
+- **Database:** PostgreSQL NeonDB
 - **Auth:** jsonwebtoken + bcrypt
-- **Other:** cors, dotenv
+
 
 ---
 
@@ -47,11 +45,11 @@ DevPulse is a backend API built with **TypeScript**, **Express.js**, and **Postg
 - Register and log in
 - Create issues (`bug` or `feature_request`)
 - View all issues
-- Edit **own open** issues (title, description, type)
+- Edit issues (title, description, type)
 - Cannot delete issues or change status
 
 ### Maintainer
-- Everything a Contributor can do
+- All things Contributor does
 - Update **any** issue
 - Change issue **status** on any issue
 - **Delete** any issue
